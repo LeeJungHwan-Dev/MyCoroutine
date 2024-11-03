@@ -43,11 +43,15 @@ class MySuspend {
                  * 그래서 만약 코루틴이 위와 같은 경우로 종료된다.
                  * try {} catch로 관리한다.
                  *
-                 *
+                 * 또는 try {} finally {}로 관리한다.
                  * **/
                 val value1 = async { getRandom1() }
                 val value2 = async { getRandom2() }
                 val value3 = async(start = CoroutineStart.LAZY) { getRandom2() }
+
+                /**
+                 * 위와 같은 코드에서 value3는 바로 예약 큐에 들어가지 않는다. value3.start()와 같이 명시적으로 큐에 넣어줘야한다.
+                 * */
 
                 Log.d(
                     TAG,
