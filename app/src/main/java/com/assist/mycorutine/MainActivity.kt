@@ -21,7 +21,7 @@ import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.withTimeoutOrNull
 
 class MainActivity : AppCompatActivity() {
-    val TAG : String = "TAG"
+    val TAG : String = "TAG_TEST"
     lateinit var mySuspend : MySuspend
     lateinit var dispatcherExample: DispatcherExample
     lateinit var myJobExample: JobExample
